@@ -1,0 +1,23 @@
+body{
+    background-color:silver;
+}
+
+p{
+    font-size: 24px;
+    background-color: #fff;
+    padding: 10px;
+    font-weight:bolder;
+}
+
+p:hover{
+    color:white;
+    background-color:black;
+}
+
+#purple{
+    color:purple;
+    background-color: thistle;
+    font-size: 40px;
+    padding: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}

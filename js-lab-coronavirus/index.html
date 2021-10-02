@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script src="js/data.js"></script>
+    <script>
+        var card = ""
+
+        // create card
+
+        document.body.innerHTML = card
+        
+        for(let i = 0; i < data.length; i++){
+            card += `<div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        State Name : ${data[i].state}
+                    </div>
+                    <div class="card-body">
+                        <p>Cases: ${data[i].cases}  </p>
+                        <p>Active Cases: ${data[i].active} </p>
+                    </div>
+                </div>
+            </div>`
+        }
+
+        document.body.innerHTML = card
+
+
+        // append data to particular tag
+
+        // var cardElement = document.createElement("h1")
+
+        // var body = document.querySelector("body")
+        
+        // cardElement.innerText("Hello world")
+
+        // body.append(cardElement)
+
+        // console.log(cardElement)
+
+        // data[0]["state"]
+
+    </script>
+</body>
+</html>

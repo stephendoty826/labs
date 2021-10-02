@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript </title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="page">
+      <h1></h1>
+      <h2>Buy Groceries <span id="counter">1</span></h2>
+      <ul id="list">
+        <li>fresh figs</li>
+      </ul>
+      <div class="button"><a href="/additem" class="add">Add list item</a></div>
+    </div>
+    
+    <script>
+      // grab ul
+      let ul = document.querySelector("#list")
+
+      // grab a
+      let a = document.querySelector(".add")
+
+      // create li element, textContent = "New Item"
+      // li = document.createElement("li")
+
+      // li.textContent = "New Item"
+
+      // append it to an existing dom item
+      // ul.append(li)
+
+      // attach event listener to a
+
+      counter = document.querySelector("#counter")
+      itemCount = 1
+      a.addEventListener("click", (e)=>{
+        e.preventDefault()
+        li = document.createElement("li")
+        li.textContent = "New Item"
+        ul.append(li)
+        itemCount++
+        counter.textContent = itemCount.toString()
+      })
+
+
+
+
+
+    </script>
+
+  </body>
+</html>

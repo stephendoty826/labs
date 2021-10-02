@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript </title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    
+<!--
+
+    Declare a function called checkUsername. 
+    This function should get the username input.  If
+    the username is too short, the set the message (feedback element),
+    otherwise clear the message. 
+  -->
+
+
+    <div id="page">
+      <h1></h1>
+      <h2>New Account</h2>
+      
+      <form method="get" action="#">
+
+        <label for="username">Create a username: </label>
+        <input type="text" id="username" />
+        <div id="feedback"></div>
+
+        <label for="password">Create a password: </label>
+        <input type="password" id="password" />
+
+        <input type="submit" value="sign up!" />
+
+      </form>
+    </div>
+    
+    <script>
+      // grab username element and feedback element
+      let username = document.querySelector("#username")
+      let feedback = document.querySelector("#feedback")
+
+      username.addEventListener("blur", (e)=>{
+        // console.log(e.target.value)
+        if(e.target.value.length < 6) {
+          feedback.textContent = "Your username must be at least 6 characters."
+        }
+        else{
+          feedback.textContent = ""
+        }
+      })
+
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="body">
+    <div id="stats">
+      screenX: <input type="text" id="sx" /> 
+      screenY: <input type="text" id="sy" /><span class="divider">|</span> 
+      pageX: <input type="text" id="px" /> 
+      pageY: <input type="text" id="py" /><span class="divider">|</span>
+      clientX: <input type="text" id="cx" /> 
+      clientY: <input type="text" id="cy" />
+    </div>
+    <div id="page">
+      <h1>List King</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li><em>fresh</em> figs</li>
+        <li>pine nuts</li>
+        <li>honey</li>
+        <li>balsamic vinegar</li>
+        <li>linguine</li>
+        <li>cream</li>
+        <li>quinoa</li>
+        <li>sourdough bread</li>
+        <li>kale</li>
+        <li>almond milk</li>
+        <li>mushrooms</li>
+        <li>apples</li>
+        <li>strawberries</li>
+        <li>rice crackers</li>
+        <li>brie</li>
+        <li>rice</li>
+      </ul>
+    </div>
+    
+    <script>
+      let body = document.querySelector("body")
+
+      let sx = document.querySelector("#sx")
+      let sy = document.querySelector("#sy")
+
+      let px = document.querySelector("#px")
+      let py = document.querySelector("#py")
+
+      let cx = document.querySelector("#cx")
+      let cy = document.querySelector("#cy")
+
+      body.addEventListener("mousemove", (e) => {
+        sx.value = e.screenX
+        sy.value = e.screenY
+
+        px.value = e.pageX
+        py.value = e.pageY
+
+        cx.value = e.clientX
+        cy.value = e.clientY
+      })
+    </script>
+  </body>
+</html>
